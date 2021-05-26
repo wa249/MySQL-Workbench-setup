@@ -1,0 +1,17 @@
+Use lead_gen_business
+
+SELECT * FROM billing;
+
+SELECT first_name, last_name FROM clients;
+
+SELECT * FROM clients WHERE first_name LIKE "%e";
+
+INSERT INTO leads (first_name, last_name, registered_datetime, email, sites_id)
+VALUES('Jason', 'Kobuchi', NOW(), 'jko@hi.com', 1);
+
+UPDATE leads SET first_name = 'Given Name', last_name='Family Name' WHERE sites_id = '1'
+
+
+SELECT CONCAT('Mr.',  ' ', first_name, ' ', last_name) AS full_name FROM leads
+
+SELECT LENGTH(last_name) AS last_len FROM leads;
